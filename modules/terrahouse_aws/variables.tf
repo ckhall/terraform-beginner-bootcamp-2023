@@ -13,7 +13,27 @@ variable "bucket_name" {
   type        = string
 
   validation {
-    condition = can(regex("^[a-z0-9.-]{3,63}$", var.bucket_name))
+    condition     = can(regex("^[a-z0-9.-]{3,63}$", var.bucket_name))
     error_message = "Bucket name must be between 3 and 63 characters, lowercase, and can only contain letters, numbers, hyphens, and periods. It can't start or end with a hyphen or period, and can't have consecutive hyphens or periods."
+  }
+}
+
+variable "index_html_path" {
+  description = "Path to the index.html file"
+  type        = string
+
+  validation {
+    condition     = fileexists(var.index_html_path)
+    error_message = "The specified index.html file path is invalid or does not exist."
+  }
+}
+
+variable "error_html_path" {
+  description = "Path to the error.html file"
+  type        = string
+
+  validation {
+    condition     = fileexists(var.error_html_path)
+    error_message = "The specified error.html file path is invalid or does not exist."
   }
 }
