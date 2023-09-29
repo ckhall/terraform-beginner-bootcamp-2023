@@ -13,3 +13,7 @@ variable "index_html_path" {
 variable "error_html_path" {
   type = string
 }
+
+variable "content_version" {
+  type = number
+}
