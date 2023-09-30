@@ -1,11 +1,11 @@
 terraform {
-  # cloud {
-  #   organization = "ckhall-tf-bootcamp"
+  cloud {
+    organization = "ckhall-tf-bootcamp"
 
-  #   workspaces {
-  #     name = "terra-house-1"
-  #   }
-  # }
+    workspaces {
+      name = "terraform-cloud"
+    }
+  }
 }
 
 module "terrahouse_aws" {
