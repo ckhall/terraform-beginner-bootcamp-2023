@@ -41,6 +41,19 @@ resource "aws_s3_object" "error_html" {
   # }
 }
 
+resource "aws_s3_object" "upload_assets" {
+  for_each = fileset(var.assets_path, "*")
+
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key    = "assets/${each.key}"
+  source = "${var.assets_path}/${each.key}"
+  etag = filemd5("${var.assets_path}/${each.key}")
+  lifecycle {
+    ignore_changes = [etag]
+    replace_triggered_by = [terraform_data.content_version.output]
+  }
+}
+
 resource "aws_s3_bucket_policy" "bucket_policy" {
   bucket = aws_s3_bucket.website_bucket.bucket
   # policy = data.aws_iam_policy_document.bucket_policy.json\

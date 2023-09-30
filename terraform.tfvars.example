@@ -3,3 +3,4 @@ bucket_name="bucket-name-here"
 index_html_path="/path/to/index.html"
 error_html_path="/path/to/error.html"
 content_version=1
+assets_path="path/to/assets"

@@ -40,12 +40,17 @@ variable "error_html_path" {
 
 
 variable "content_version" {
-  type        = number
   description = "Content version (a positive integer starting at 1)"
+  type        = number
   default     = 1
 
   validation {
     condition     = var.content_version > 0 && floor(var.content_version) == var.content_version
     error_message = "Content version must be a positive integer."
   }
+}
+
+variable "assets_path" {
+  description = "path to assets"
+  type        = string
 }
