@@ -17,7 +17,7 @@ class Home
     gamers-grotto
   ).freeze
 
-  validates :town, presence: true, inclusion; { in: VALID_TOWNS }
+  validates :town, presence: true, inclusion: { in: VALID_TOWNS }
   validates :name, presence: true
   validates :description, presence: true
   validates :domain_name, 
