@@ -6,7 +6,6 @@ tasks:
       bash ./bin/install-terraform-cli &&
       bash ./bin/generate_tfrc_credentials &&
       bash ./bin/set-tf-alias &&
-      cp $PROJECT_ROOT/terraform.tfvars.example $PROJECT_ROOT/terraform.tfvars
   - name: aws-cli
     env:
       AWS_CLI_AUTO_PROMPT: on-partial
