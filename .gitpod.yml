@@ -16,12 +16,14 @@ tasks:
   - name: http-server
     before: |
       cd $PROJECT_ROOT
+    init:
       npm install -g http-server
     command:
       http-server
   - name: sinatra
     before: | 
       cd $PROJECT_ROOT/terratowns_mock_server
+    init:
       bundle install
     command:
       bundle exec ruby server.rb 
