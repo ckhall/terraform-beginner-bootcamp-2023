@@ -20,9 +20,10 @@ tasks:
     command:
       http-server
   - name: sinatra
-    init: | 
+    before: | 
       cd $PROJECT_ROOT/terratowns_mock_server
       bundle install
+    command:
       bundle exec ruby server.rb 
 vscode:
   extensions:
