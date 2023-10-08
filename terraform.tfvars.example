@@ -1,6 +1,5 @@
-user_uuid="user-id-here"
-bucket_name="bucket-name-here"
-index_html_path="/path/to/index.html"
-error_html_path="/path/to/error.html"
+index_html_path="public/index.html"
+error_html_path="public/error.html"
 content_version=1
-assets_path="path/to/assets"
+assets_path="public/assets"
+terratowns_endpoint="https://terratowns.cloud/api"
