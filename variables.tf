@@ -21,7 +21,7 @@ variable "home1" {
   })
 }
 
-variable "home2" {
+variable "waterfall" {
   type = object({
     public_path = string
     content_version = string

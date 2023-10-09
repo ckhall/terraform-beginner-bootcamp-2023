@@ -2,8 +2,10 @@ home1 = {
   content_version=1
   public_path=public/home1
 }
-home2 = {
+
+waterfall = {
   content_version=1
-  public_path=public/home2
+  public_path=public/waterfall
 }
+
 terratowns_endpoint="https://terratowns.cloud/api"

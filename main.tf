@@ -43,17 +43,17 @@ resource "terratowns_home" "home1" {
   content_version = var.home1.content_version
 }
 
-module "home2_hosting" {
+module "waterfall_hosting" {
   source = "./modules/terrahome_aws"
   user_uuid = var.user_uuid
-  public_path = var.home2.public_path
-  content_version = var.home2.content_version
+  public_path = var.waterfall.public_path
+  content_version = var.waterfall.content_version
 }
 
-resource "terratowns_home" "home2" {
-  name = "Another home"
-  description = "a home description"
-  domain_name = module.home2_hosting.domain_name
-  town = "missingo"
-  content_version = var.home2.content_version
+resource "terratowns_home" "waterfall" {
+  name = "Wonderful waterfall"
+  description = "waterfalls"
+  domain_name = module.waterfall_hosting.domain_name
+  town = "the-nomad-pad"
+  content_version = var.waterfall.content_version
 }
