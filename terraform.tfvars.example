@@ -1,5 +1,9 @@
-index_html_path="public/index.html"
-error_html_path="public/error.html"
-content_version=1
-assets_path="public/assets"
+home1 = {
+  content_version=1
+  public_path=public/home1
+}
+home2 = {
+  content_version=1
+  public_path=public/home2
+}
 terratowns_endpoint="https://terratowns.cloud/api"

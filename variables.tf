@@ -14,18 +14,16 @@ variable "terratowns_access_token" {
 #   type = string
 # }
 
-variable "index_html_path" {
-  type = string
+variable "home1" {
+  type = object({
+    public_path = string
+    content_version = number
+  })
 }
 
-variable "error_html_path" {
-  type = string
-}
-
-variable "content_version" {
-  type = number
-}
-
-variable "assets_path" {
-  type = string
+variable "home2" {
+  type = object({
+    public_path = string
+    content_version = string
+  })
 }
